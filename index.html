@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Lazy Loading Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+    
+    <style>
+        html, body {
+          height: 100%;
+        }
+    
+        .lazy {
+          width: 100%;
+          display: block;
+          margin: auto;
+          object-fit: cover;
+        }
+    
+        img {
+          min-height: 100px;
+          min-width: 100px;
+        }
+      </style>
+  </head>
+
+  
+
+  <body>
+    <main class="">
+      <section class="row">
+        <div class="col-xs-12">
+          <img class="lazy" data-src="images\49ers.png" />
+        </div>
+        <div class="col-xs-12">
+          <img class="lazy" data-src="images\amelies.png" />
+        </div>
+        <div class="col-xs-12">
+          <img class="lazy" data-src="images\bofa.png" />
+        </div>
+      </section>
+    </main>
+
+    
+    <script src="js/lazyload.min.js"></script>
+    <script>
+      (function () {
+        function logElementEvent(eventName, element) {
+          console.log(Date.now(), eventName, element.getAttribute("data-src"));
+        }
+  
+        ll = new LazyLoad({
+          elements_selector: '.lazy',
+          load_delay: 1000,
+          threshold: 0,
+  
+          callback_enter: function (element) {
+            logElementEvent("ENTERED", element);
+          },
+          callback_load: function (element) {
+            logElementEvent("LOADED", element);
+          },
+          callback_set: function (element) {
+            logElementEvent("SET", element);
+          },
+          callback_error: function (element) {
+            logElementEvent("ERROR", element);
+            element.src = "https://placeholdit.imgix.net/~text?txtsize=21&txt=Fallback%20image&w=220&h=280";
+          }
+        });
+      }());
+    </script>
+    <!-- <script src="js\main.js"></script> -->
+  </body>
+</html>
