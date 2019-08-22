@@ -1,77 +1,106 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Lazy Loading Example</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
-    
-    <style>
-        html, body {
-          height: 100%;
-        }
-    
-        .lazy {
-          width: 100%;
-          display: block;
-          margin: auto;
-          object-fit: cover;
-        }
-    
-        img {
-          min-height: 100px;
-          min-width: 100px;
-        }
-      </style>
-  </head>
 
-  
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lazy Loading Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <body>
-    <main class="">
-      <section class="row">
-        <div class="col-xs-12">
-          <img class="lazy" data-src="images\49ers.png" />
-        </div>
-        <div class="col-xs-12">
-          <img class="lazy" data-src="images\amelies.png" />
-        </div>
-        <div class="col-xs-12">
-          <img class="lazy" data-src="images\bofa.png" />
-        </div>
-      </section>
-    </main>
-
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
     
-    <script src="js/lazyload.min.js"></script>
-    <script>
-      (function () {
-        function logElementEvent(eventName, element) {
-          console.log(Date.now(), eventName, element.getAttribute("data-src"));
+    .lazy {
+      width: 100%;
+      display: block;
+      margin: auto;
+      object-fit: cover;
+    }
+    
+    img {
+      min-height: 100px;
+      min-width: 100px;
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <main class="container">
+    <section class="row">
+      <div class="container">
+        <div class="col-md-6">
+          <h1>Scroll all the way to bottom to reveal the lazy-loaded images</h1>
+        </div>
+    </section>
+    <section class="row">
+      <div class="col-md-6">
+        Lorem ipsum dolor sit amet, quaeque molestie mel in, id sea zril utamur assentior. Ea mea oblique veritus fierent, nam an iisque praesent sadipscing. Ad pri munere option, magna persius his ea. Soluta efficiantur pro ea, soleat aperiam efficiantur quo
+        no, qui ex insolens democritum. Sit ea tritani atomorum, aliquip principes his no. Te per amet percipit erroribus. Eos an diam lobortis, at mea nusquam legendos. Inermis iudicabit conclusionemque pri no. Falli forensibus ea vel, ea falli petentium
+        his. Nostro inermis feugait et per. Magna ridens lobortis qui no. Ex facer dicit mel. Aliquip deterruisset eam te, nec harum civibus id. Unum appareat torquatos nam eu. Cu eum case fuisset interpretaris, eum ut detraxit expetenda, ea nec dico
+        laoreet tincidunt. Nemore labitur cu sed, cu quo malorum ceteros. Est utinam deseruisse an, sea ad quodsi utamur docendi, placerat fabellas liberavisse cu pri. In doctus tritani delicata sea, vix cu utamur virtute. Te cum quis dolore percipitur,
+        eripuit prodesset ex est. Ei usu dicta quodsi suavitate, ex quod case aperiam qui. Duo ei audire oporteat senserit, ne aliquip blandit sed, persius eruditi oportere cu sed. Senserit expetenda ut mel, ea ius elit dicit theophrastus. Pertinax
+        praesent disputando no mel, mel odio illud ne, ad nec alii ignota. Qui doming insolens et, soleat animal consequat mel eu, mei viderer albucius facilisi ex. In tritani molestie partiendo sit, eam oratio appetere in. Ea eum debitis volumus fabellas,
+        ex usu adhuc congue.
+        Lorem ipsum dolor sit amet, quaeque molestie mel in, id sea zril utamur assentior. Ea mea oblique veritus fierent, nam an iisque praesent sadipscing. Ad pri munere option, magna persius his ea. Soluta efficiantur pro ea, soleat aperiam efficiantur quo
+        no, qui ex insolens democritum. Sit ea tritani atomorum, aliquip principes his no. Te per amet percipit erroribus. Eos an diam lobortis, at mea nusquam legendos. Inermis iudicabit conclusionemque pri no. Falli forensibus ea vel, ea falli petentium
+        his. Nostro inermis feugait et per. Magna ridens lobortis qui no. Ex facer dicit mel. Aliquip deterruisset eam te, nec harum civibus id. Unum appareat torquatos nam eu. Cu eum case fuisset interpretaris, eum ut detraxit expetenda, ea nec dico
+        laoreet tincidunt. Nemore labitur cu sed, cu quo malorum ceteros. Est utinam deseruisse an, sea ad quodsi utamur docendi, placerat fabellas liberavisse cu pri. In doctus tritani delicata sea, vix cu utamur virtute. Te cum quis dolore percipitur,
+        eripuit prodesset ex est. Ei usu dicta quodsi suavitate, ex quod case aperiam qui. Duo ei audire oporteat senserit, ne aliquip blandit sed, persius eruditi oportere cu sed. Senserit expetenda ut mel, ea ius elit dicit theophrastus. Pertinax praesent
+        disputando no mel, mel odio illud ne, ad nec alii ignota. Qui doming insolens et, soleat animal consequat mel eu, mei viderer albucius facilisi ex. In tritani molestie partiendo sit, eam oratio appetere in. Ea eum debitis volumus fabellas, ex
+        usu adhuc congue.
+      </div>
+    </section>
+    </div>
+
+    <section class="row">
+      <div class="col-1">
+        <img class="lazy" data-src="images\49ers.png" />
+      </div>
+      <div class="col-1">
+        <img class="lazy" data-src="images\amelies.png" />
+      </div>
+      <div class="col-1">
+        <img class="lazy" data-src="images\bofa.png" />
+      </div>
+    </section>
+  </main>
+
+
+  <script src="js/lazyload.min.js"></script>
+  <script>
+    (function() {
+      function logElementEvent(eventName, element) {
+        console.log(Date.now(), eventName, element.getAttribute("data-src"));
+      }
+
+      ll = new LazyLoad({
+        elements_selector: '.lazy',
+        load_delay: 1000,
+        threshold: 0,
+
+        callback_enter: function(element) {
+          logElementEvent("ENTERED", element);
+        },
+        callback_load: function(element) {
+          logElementEvent("LOADED", element);
+        },
+        callback_set: function(element) {
+          logElementEvent("SET", element);
+        },
+        callback_error: function(element) {
+          logElementEvent("ERROR", element);
+          element.src = "https://placeholdit.imgix.net/~text?txtsize=21&txt=Fallback%20image&w=220&h=280";
         }
-  
-        ll = new LazyLoad({
-          elements_selector: '.lazy',
-          load_delay: 1000,
-          threshold: 0,
-  
-          callback_enter: function (element) {
-            logElementEvent("ENTERED", element);
-          },
-          callback_load: function (element) {
-            logElementEvent("LOADED", element);
-          },
-          callback_set: function (element) {
-            logElementEvent("SET", element);
-          },
-          callback_error: function (element) {
-            logElementEvent("ERROR", element);
-            element.src = "https://placeholdit.imgix.net/~text?txtsize=21&txt=Fallback%20image&w=220&h=280";
-          }
-        });
-      }());
-    </script>
-    <!-- <script src="js\main.js"></script> -->
-  </body>
+      });
+    }());
+  </script>
+  <!-- <script src="js\main.js"></script> -->
+</body>
+
 </html>
